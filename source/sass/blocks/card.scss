@@ -1,0 +1,125 @@
+.card {
+  width: 320px;
+  height: 490px;
+  color: $grey;
+  background: url("../img/cat.png"),
+    linear-gradient(135deg, transparent 30px, $blue 30px, $blue 34px, $verizon 34px);
+  background-repeat: no-repeat;
+  background-position: -30px 250px, 0 0;
+  font-family: "Trebuchet MS", "Arial", sans-serif;
+  border-radius: 12px;
+  border-bottom: 4px solid $blue;
+  border-right: 4px solid $blue;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background: url("../img/cat.png"),
+      linear-gradient(135deg, transparent 30px, $blue-200 30px, $blue-200 34px, $verizon 34px);
+    background-repeat: no-repeat;
+    background-position: -30px 250px, 0 0;
+    border-color: $blue-200;
+
+    .card__weight {
+      background-color: $blue-200;
+    }
+
+    &::after,
+    &::before {
+      background-color: $blue-200;
+    }
+  }
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 450px;
+  bottom: 0;
+  left: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: $blue;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 5px;
+  top: 0;
+  right: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: $blue;
+}
+
+.card__info {
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+.card__description {
+  line-height: 19px;
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.card__title {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  color: $black;
+}
+
+.card__taste {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  color: $black;
+}
+
+
+.card__portion,
+.card__gifts {
+  margin-bottom: 3px;
+}
+
+.card__gifts,
+.card__comment {
+  margin-top: 0;
+}
+
+.card__portion,
+.card__gifts,
+.card__comment {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__weight {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Trebuchet MS", "Arial", sans-serif;
+  font-size: 42px;
+  line-height: 34px;
+  border-radius: 50%;
+  color: $white;
+  background-color: $blue;
+
+  span {
+    font-size: 20px;
+  }
+}
